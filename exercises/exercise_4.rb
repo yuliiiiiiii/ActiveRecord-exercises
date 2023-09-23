@@ -17,7 +17,7 @@ Store.create(name: 'Yaletown', annual_revenue: 430000, mens_apparel: true, women
 #puts Store.count
 @mens_stores.each {|store| puts store.name, store.annual_revenue}
 
-@womens_store = Store.where(womens_apparel: true).where("annual_revenue < ?", 1000000)
+@womens_store = Store.where(womens_apparel: true).where("annual_revenue < 1000000", 1000000)
 #can not use Ruby comparison directly in the .where AR method!, instead should use a String to specify the SQL conditions
 
 @womens_store.each{|store| puts store.name, store.annual_revenue}
