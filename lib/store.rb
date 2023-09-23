@@ -1,5 +1,7 @@
 class Store < ActiveRecord::Base
   #define the Active Record model Store to be linked with stores table in the database
+
+  #One-to-many association, a store has many employees
   has_many :employees
 
   #Stores must always have a name that is a minimum of 3 characters

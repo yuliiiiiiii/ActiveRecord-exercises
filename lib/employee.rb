@@ -1,4 +1,6 @@
 class Employee < ActiveRecord::Base
+
+  #One-to-many association, a store has many employees, but an employees only belongs to one store
   belongs_to :store
 
   #employees must have a first name and a last name
